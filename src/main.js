@@ -8,7 +8,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 // import Cookies from 'js-cookie'
-import axios from 'axios'
+import axios from './interceptors/interceptor'
 // import Api from './api'
 
 Vue.config.productionTip = false
