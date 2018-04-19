@@ -12,10 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://cbc.gzxinmi.com/bbae-investment-api/',
+        target: 'http://110.173.52.186/bbae-investment-api/',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/api': '/'
         }
       }
     },
