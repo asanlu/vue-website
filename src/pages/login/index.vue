@@ -26,17 +26,18 @@
 </template>
 
 <script>
-import { customerLogin } from "../../service";
+// 13750203069
+import { customerLogin } from '../../service';
 export default {
   data() {
     return {
       loginForm: {
-        mobile: "",
-        pass: ""
+        mobile: '',
+        pass: ''
       },
       rules2: {
-        pass: [{ required: true, message: "请输入密码", trigger: "blur" }],
-        mobile: [{ required: true, message: "请输入账号", trigger: "blur" }]
+        pass: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+        mobile: [{ required: true, message: '请输入账号', trigger: 'blur' }]
       },
       remember: false
     };
@@ -48,20 +49,24 @@ export default {
         if (valid) {
           //axios请求
           customerLogin({
-            country: "+86",
+            country: '86',
             mobile: this.loginForm.mobile,
             password: this.loginForm.pass
           })
             .then(response => {
+              // this.handleError(response);
+              console.log('===views===');
+              console.log(response);
+              console.log('===views===');
               var res = response.data;
-              console.log(res);
+              var a =  res;
               // this.$message({
               //   message: res.msg,
               //   type: 'error'
               // });
-            });
+            })
         } else {
-          console.log("error submit!!");
+          console.log('error submit!!');
           return false;
         }
       });

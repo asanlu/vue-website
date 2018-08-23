@@ -10,15 +10,14 @@ export default {
   methods: {
     open() {
       this.$message({
-          message: '恭喜你，这是一条成功消息',
-          type: 'success'
-        });
+        message: "恭喜你，这是一条成功消息",
+        type: "success"
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
-
 </style>
 
