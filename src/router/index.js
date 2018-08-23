@@ -25,6 +25,6 @@ export default new Router({
       },
       name: 'admin',
       component: Admin
-    },
+    }
   ]
 })

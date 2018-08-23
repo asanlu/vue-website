@@ -3,11 +3,11 @@
  */
 
 import axios from 'axios'
-import Router from 'vue-router'
+import router from '../router'
 import { Loading, Message } from 'element-ui'
 // 超时时间
 axios.defaults.timeout = 5000
-const router = new Router();
+// const router = new Router();
 
 var loadinginstace;
 
@@ -34,12 +34,8 @@ axios.interceptors.response.use(res => {
       case '0000':   // 数据正确
         break;
       case '2001':   // 密码或账号错误
-        Message({
-          message: res.data.msg,
-          type: 'error',
-          onClose: (msg) => {
-            router.push('/ads');
-          }
+        Message.error({
+          message: res.data.msg
         });
         break;
       case '2003':   // 会话超时
